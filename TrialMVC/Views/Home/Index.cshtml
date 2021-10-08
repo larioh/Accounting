@@ -1,0 +1,401 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Login</title>
+    <partial name="_Styles" />
+</head>
+<body class="hold-transition login-page">
+    <div class="container" style="width:35%; height:500px; border-radius: 15px 15px 15px 15px;margin-top: 50px;">
+        <div class="login-box">
+            <!-- /.login-logo -->
+            <div class="card  card-primary" style="min-height:350px;">
+                <div class="card-header text-center"  style="background-color:#467fd0;color:white;">
+                    <h1><b>Login Panel</b></h1>
+                </div>
+                <div class="card-body">
+                 
+                    <div class="input-group mb-3">
+                        <input type="text" id="username" class="form-control" placeholder="Username" autocomplete="off">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" id="password" class="form-control" placeholder="Password" autocomplete="off">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary" style="display:none">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+                                    Remember Me
+                                </label>
+                            </div>
+                            <button type="button" id="print" class="btn btn-primary btn-block" style="display:none">Test Printer</button>
+                        </div>
+                        <!-- /.col -->
+
+                        <button type="button" id="login" class="btn btn-primary btn btn-block">Log In</button>
+                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-success btn btn-block">Create Account</button>
+
+                        
+                        <!-- /.col -->
+                    </div>
+
+                  
+                        <div id="exampleModal" class="modal"  role="dialog">
+                            <div class="modal-dialog" style="max-width: 80%;" role="document" >
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color:#467fd0;color:white;text-align:center">
+                                        <h5 class="modal-title w-100 text-center">Registration Form</h5>
+                                       
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row" style="border-radius:5px;border:1px solid #DDDDDD;padding:5px;">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="">Name </label>
+                                                    <input type="text" class="form-control" id="name" placeholder="Enter  Name" style="height:30px;" autocomplete="off" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="">Id Number</label>
+                                                    <input type="text" class="form-control" id="idno" placeholder="Enter  ID Number" style="height:30px;" autocomplete="off" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="">Email</label>
+                                                    <input type="email" class="form-control" id="email" placeholder="Enter  email address" style="height:30px;" autocomplete="off" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="border-radius:5px;border:1px solid #DDDDDD;padding:5px;">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="">Phone Number</label>
+                                                    <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" style="height:30px;" autocomplete="off" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="">Username</label>
+                                                    <input type="text" class="form-control" id="userid" placeholder="Enter Username" style="height:30px;" autocomplete="off" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="">Password</label>
+                                                    <input type="text" class="form-control" id="pass" placeholder="Enter Password" style="height:30px;" autocomplete="off" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="border-radius:5px;border:1px solid #DDDDDD;padding:5px;">
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="">Confirm Password</label>
+                                                    <input type="text" class="form-control" id="cpass" placeholder="Confirm Password" style="height:30px;" autocomplete="off" />
+                                                </div>
+                                            </div>
+                                         
+                                        </div>
+
+
+                                    </div>
+                                        <div class="modal-footer" style="background-color:#467fd0;color:white;text-align:center">
+                                            <button type="submit" id="register" class="btn btn-success">Register</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                   
+                        <script type="text/javascript">
+            
+                        </script>
+                    
+
+                    <div class="social-auth-links text-center mt-2 mb-3" style="display:none">
+                        <a href="#" class="btn btn-block btn-primary">
+                            <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                        </a>
+                        <a href="#" class="btn btn-block btn-danger">
+                            <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                        </a>
+                    </div>
+                    <!-- /.social-auth-links -->
+
+                    <p class="mb-1" style="display:none">
+                        <a href="forgot-password.html">I forgot my password</a>
+                    </p>
+                    <p class="mb-0" style="display:none">
+                        <a href="register.html" class="text-center">Register a new membership</a>
+                    </p>
+                </div>
+                <!-- /.card-body -->
+            </div>
+        </div>
+    </div>
+    <partial name="_Scripts" />
+    <script type="text/javascript">
+
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+
+        $(document).ready(function () {
+
+            $('body').css('zoom', '85%');
+            $('#username').focus();
+            $('#username').keyup(function () {
+                var str = $(this).val();
+                $('#username').val(str.toLowerCase());
+            });
+            $('#username').keypress(function (event) {
+                if (event.keyCode == 13) {
+                    $('#password').focus();
+                }
+            });
+            $('#password').keypress(function (event) {
+                if (event.keyCode == 13) {
+                    $('#login').focus();
+                }
+            });
+            $('#print').click(function () {
+                window.location.href = "PosApp:TEST1234";
+            });
+
+
+            $('#login').click(function () {
+                //alert('jquery ready')
+                var username = $('#username').val();
+                var password = $('#password').val();
+
+                if (username == '') {
+                    $('#username').focus();
+                    BootstrapDialog.alert({
+                        title: 'Username',
+                        type: BootstrapDialog.TYPE_INFO,
+                        message: 'Username is required'
+                    });
+                    return;
+                }
+                else if (password == '') {
+                    $('#password').focus();
+                    alert('Password is Required');
+
+                    return;
+                }
+                else {
+
+                    swal.fire({
+                        title: 'Log In Please Wait'
+                    });
+                    swal.showLoading();
+                    axios({
+                        method: 'post',
+                        url: 'https://localhost:44386/webservice/users/login',
+                        //auth: {
+                        //    username: 'admin',
+                        //    password: 'password'
+                        //},
+                        data: {
+                            username: username,
+                            password: password
+                        }
+                    })
+                        .then(function (response)
+                        {
+                            swal.close();
+
+
+
+                            if (response.data.Value.returnData.Message == "Login Successfully") {
+                                
+                                if (typeof (Storage) !== "undefined")
+                                    sessionStorage.setItem("username", response.data.Value.returnData.Data);
+                               
+                                    $('#username').val('');
+                                    $('#password').val('');
+                                    var url = '@Url.Action("Accounts","Home")';
+                                window.location.href = url;
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: 'Login Successfully',
+                                    showConfirmButton: true,
+                                    timer: 15000000000
+                                })
+                                
+                                }
+                            else {
+
+                                BootstrapDialog.alert({
+                                    title: 'Login Error',
+                                    message:response.data.Value.returnData.Message
+                                });
+                                }
+
+
+                            })
+                        .catch(function (error) {
+                                swal.close();
+                                BootstrapDialog.alert({
+                                    title: 'Login Error',
+                                    message: error
+                                });
+                            });
+                     }
+            });
+        });
+         $('#register').click(function () {
+                //alert('jquery ready')
+             var name = $('#name').val();
+             var iddno = $('#idno').val();
+             var email = $('#email').val();
+             var phone = $('#phone').val();
+             var userid = $('#userid').val();
+             var pass = $('#pass').val();
+             var cpass = $('#cpass').val();
+
+
+             if (pass != cpass) {
+                 BootstrapDialog.alert({
+                     title: 'Password Mismatch',
+                     type: BootstrapDialog.TYPE_INFO,
+                     message: 'Passwords do not match'
+                 });
+                 return;
+             }
+
+             if (name == '') {
+                    $('#name').focus();
+                    BootstrapDialog.alert({
+                        title: 'Name',
+                        type: BootstrapDialog.TYPE_INFO,
+                        message: 'Name is required'
+                    });
+                    return;
+                }
+                else if (iddno == '') {
+                    $('#idno').focus();
+                    alert('ID is Required');
+
+                    return;
+             }
+             else if (email == '') {
+                 $('#email').focus();
+                 alert('email is Required');
+
+                 return;
+             }
+             else if (phone == '') {
+                 $('#phone').focus();
+                 alert('phone is Required');
+
+                 return;
+             }
+             else if (userid == '') {
+                 $('#userid').focus();
+                 alert('Username is Required');
+
+                 return;
+             }
+             else if (pass == '') {
+                 $('#pass').focus();
+                 alert('Password is Required');
+
+                 return;
+             }
+             else if (cpass == '') {
+                 $('#cpass').focus();
+                 alert('Confirm your password');
+
+                 return;
+             }
+                else {
+
+                    swal.fire({
+                        title: 'Registration in Progress Please Wait'
+                    });
+                    swal.showLoading();
+                    axios({
+                        method: 'post',
+                        url: 'https://localhost:44386/webservice/users/register',
+                        //auth: {
+                        //    username: 'admin',
+                        //    password: 'password'
+                        //},
+                        data: {
+                            name: name,
+                            iddno: iddno,
+                            email: email,
+                            phone: phone,
+                            userid: userid,
+                            pass: pass,
+                        }
+                    })
+                        .then(function (response)
+                        {
+                            swal.close();
+
+
+
+                            if (response.data.Value.returnData.Message == "Registration Successful") {
+                                if (typeof (Storage) !== "undefined")
+                                    sessionStorage.setItem("username", response.data.Value.returnData.Data);
+                                BootstrapDialog.alert({
+                                    title: 'Registration Process',
+                                    type: BootstrapDialog.TYPE_INFO,
+                                    message: 'Registration Successful'
+                                });
+                                
+                                $('#name').val('');
+                                $('#idno').val('');
+                                $('#email').val('');
+                                $('#phone').val('');
+                                $('#userid').val('');
+                                $('#pass').val('');
+                                $('#cpass').val('');
+                                    var url = '@Url.Action("Index","Home")';
+                                    window.location.href = url;
+
+                                }
+                            else {
+
+                                BootstrapDialog.alert({
+                                    title: 'Login Error',
+                                    message:response.data.Value.returnData.Message
+                                });
+                                }
+
+
+                            })
+                        .catch(function (error) {
+                                swal.close();
+                                BootstrapDialog.alert({
+                                    title: 'Login Error',
+                                    message: error
+                                });
+                            });
+                     }
+            });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js" defer></script>
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js" defer></script>
+    <script src="~/plugins/axios/axios.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#dataTable').DataTable({
+                "ajax": {
+                    "url": "https://localhost:44386/webservice/users/fetchdata",
+                    "type": "GET",
+                    "datatype": "json",
+                    "contentType": 'application/json',
+                    "dataSrc": "Value"
+                   
+                },
+                //"data":"data",
+                "columns": [
+                    { "data": 'id' },
+                    { "data": 'username' },
+                    { "data": 'password' },
+                ]
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container py-4">
+        <h4 class="text-center text-uppercase">Users In the Sytem</h4>
+        <div id="dataTable_wrapper"></div>
+        <table id="dataTable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>  
